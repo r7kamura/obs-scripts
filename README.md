@@ -4,6 +4,8 @@ Utility scripts for OBS Studio.
 
 ## chapter.lua
 
+Generate YouTube chapter file according to the switched scenes.
+
 ### Install
 
 Download chapter.lua to an apporpriate location and select it from Tool > Scripts section in OBS Studio.
