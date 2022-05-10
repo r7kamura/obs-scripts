@@ -1,5 +1,7 @@
 # obs-scripts
 
+[![lint](https://github.com/r7kamura/obs-scripts/actions/workflows/lint.yml/badge.svg)](https://github.com/r7kamura/obs-scripts/actions/workflows/lint.yml)
+
 Utility scripts for OBS Studio.
 
 ## chapter.lua
