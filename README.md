@@ -23,4 +23,5 @@ The output file will look something like this:
 00:00 Scene A
 01:23 Scene B
 02:34 Scene C
+03:45 Scene A
 ```
