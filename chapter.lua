@@ -79,3 +79,8 @@ end
 function script_load(settings)
 	obs.obs_frontend_add_event_callback(on_obs_frontend_event)
 end
+
+-- OBS callback.
+function script_description()
+	return "Generate YouTube chapter file according to the switched scenes."
+end
