@@ -15,7 +15,7 @@ Download chapter.lua and select it from Tool > Scripts section in OBS Studio.
 ### How it works?
 
 When a scene is switched during the stream, the scene name and elapsed time is stored in YouTube format.
-When you finish streaming, a text file is generated to the specified file path.
+When you finish streaming, a text file is generated in the specified directory.
 
 The output file will look something like this:
 

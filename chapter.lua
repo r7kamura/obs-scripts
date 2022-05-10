@@ -1,7 +1,7 @@
 obs = obslua
 
 stream_started_at_seconds = nil
-output_path = ""
+output_directory_path = ""
 
 function get_current_scene_name()
 	local scene = obs.obs_frontend_get_current_scene()
@@ -48,8 +48,11 @@ end
 function on_obs_frontend_event_streaming_started()
 	stream_started_at_seconds = os.time()
 
-	if output_path ~= "" then
-		io.output(output_path)
+	if output_directory_path ~= "" then
+		local file_separator = package.config:sub(1, 1)
+		local file_name = os.date("chapters-%Y%m%d%H%M%S.txt")
+		local file = io.open(output_directory_path .. file_separator .. file_name)
+		io.output(file)
 	end
 
 	write_chapter_line(0)
@@ -58,7 +61,7 @@ end
 function on_obs_frontend_event_streaming_stopped()
 	stream_started_at_seconds = nil
 
-	if output_path ~= "" then
+	if output_directory_path ~= "" then
 		io.close()
 	end
 end
@@ -66,13 +69,13 @@ end
 -- OBS callback.
 function script_properties()
 	local props = obs.obs_properties_create()
-	obs.obs_properties_add_path(props, "output_path", "Output path", obs.OBS_PATH_FILE, "text file (*.txt)", nil)
+	obs.obs_properties_add_path(props, "output_directory_path", "Output directory", obs.OBS_PATH_DIRECTORY, "", nil)
 	return props
 end
 
 -- OBS callback.
 function script_update(settings)
-	output_path = obs.obs_data_get_string(settings, "output_path")
+	output_directory_path = obs.obs_data_get_string(settings, "output_directory_path")
 end
 
 -- OBS callback.
