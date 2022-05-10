@@ -15,7 +15,7 @@ Download chapter.lua to an apporpriate location and select it from Tool > Script
 ### How it works?
 
 When a scene is switched during the stream, the scene name and elapsed time is stored in YouTube format.
-When you finish streaming, a text file is generated to the specified directory.
+When you finish streaming, a text file is generated to the specified file path.
 
 The output file will look something like this:
 
