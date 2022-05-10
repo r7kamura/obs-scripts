@@ -10,7 +10,7 @@ Generate YouTube chapter file according to the switched scenes.
 
 ### Install
 
-Download chapter.lua to an apporpriate location and select it from Tool > Scripts section in OBS Studio.
+Download chapter.lua and select it from Tool > Scripts section in OBS Studio.
 
 ### How it works?
 
