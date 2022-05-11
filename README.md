@@ -16,8 +16,8 @@ Download [chapter.lua](https://raw.githubusercontent.com/r7kamura/obs-scripts/ma
 
 ### How it works?
 
-When a scene is switched during the stream, the scene name and elapsed time is stored in YouTube format.
-When you finish streaming, a text file is generated in the specified directory.
+When a scene is switched during the streaming or recording, the scene name and elapsed time is stored in YouTube format.
+When you finish streaming or recording, a text file is generated in the specified directory.
 
 The output file will look something like this:
 
