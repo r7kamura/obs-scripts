@@ -24,12 +24,12 @@ function write_chapter_line(elapsed_seconds)
 end
 
 function on_obs_frontend_event(event)
-	if event == obs.OBS_FRONTEND_EVENT_STREAMING_STARTED then
-		on_obs_frontend_event_streaming_started()
+	if event == obs.OBS_FRONTEND_EVENT_STREAMING_STARTED or event == obs.OBS_FRONTEND_EVENT_RECORDING_STARTING then
+		on_obs_frontend_event_started()
 	end
 
-	if event == obs.OBS_FRONTEND_EVENT_STREAMING_STOPPED then
-		on_obs_frontend_event_streaming_stopped()
+	if event == obs.OBS_FRONTEND_EVENT_STREAMING_STOPPED or event == obs.OBS_FRONTEND_EVENT_RECORDING_STOPPED then
+		on_obs_frontend_event_stopped()
 	end
 
 	if event == obs.OBS_FRONTEND_EVENT_SCENE_CHANGED then
@@ -45,7 +45,7 @@ function on_obs_frontend_event_scene_changed()
 	write_chapter_line(os.difftime(os.time(), stream_started_at_seconds))
 end
 
-function on_obs_frontend_event_streaming_started()
+function on_obs_frontend_event_started()
 	stream_started_at_seconds = os.time()
 
 	if output_directory_path ~= "" then
@@ -58,7 +58,7 @@ function on_obs_frontend_event_streaming_started()
 	write_chapter_line(0)
 end
 
-function on_obs_frontend_event_streaming_stopped()
+function on_obs_frontend_event_stopped()
 	stream_started_at_seconds = nil
 
 	if output_directory_path ~= "" then
