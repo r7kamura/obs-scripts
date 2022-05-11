@@ -12,6 +12,8 @@ Generate YouTube chapter file according to the switched scenes.
 
 Download [chapter.lua](https://raw.githubusercontent.com/r7kamura/obs-scripts/main/chapter.lua) and select it from Tool > Scripts section in OBS Studio.
 
+![](images/obs-settings.png)
+
 ### How it works?
 
 When a scene is switched during the stream, the scene name and elapsed time is stored in YouTube format.
