@@ -20,8 +20,8 @@ When you finish streaming, a text file is generated in the specified directory.
 The output file will look something like this:
 
 ```
-00:00 Scene A
-01:23 Scene B
-02:34 Scene C
-03:45 Scene A
+00:00:00 Scene A
+01:00:00 Scene B
+02:00:00 Scene C
+03:40:50 Scene A
 ```
