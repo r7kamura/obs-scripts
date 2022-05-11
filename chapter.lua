@@ -12,7 +12,7 @@ end
 
 function format_chapter_line(scene_name, elapsed_seconds)
 	local seconds = math.floor(elapsed_seconds % 60)
-	local minutes = math.floor(elapsed_seconds / 60)
+	local minutes = math.floor((elapsed_seconds / 60) % 60)
 	local hours = math.floor(elapsed_seconds / 3600)
 	return string.format("%02d:%02d:%02d %s", hours, minutes, seconds, scene_name)
 end
