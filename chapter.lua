@@ -51,7 +51,7 @@ function on_obs_frontend_event_started()
 	if output_directory_path ~= "" then
 		local file_separator = package.config:sub(1, 1)
 		local file_name = os.date("chapters-%Y%m%d%H%M%S.txt")
-		local file = io.open(output_directory_path .. file_separator .. file_name)
+		local file = io.open(output_directory_path .. file_separator .. file_name, "w")
 		io.output(file)
 	end
 
